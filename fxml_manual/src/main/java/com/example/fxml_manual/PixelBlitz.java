@@ -15,7 +15,7 @@ public class PixelBlitz extends Application {
     @Override
     public void start(Stage stage) throws IOException, LineUnavailableException {
         FXMLLoader fxmlLoader = new FXMLLoader(PixelBlitz.class.getResource("title_screen.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 550, 430, Color.GRAY);
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 1000, Color.GRAY);
         //sound api
         sound_api obj_sound = new sound_api();
 
@@ -29,6 +29,7 @@ public class PixelBlitz extends Application {
 
         stage.setTitle("Pixel Blitz!");
         stage.setFullScreen(false);
+        stage.setResizable(false);
         /*Audio  API*/
 //        String audiofile = "Turkish Landscape.mp3";
 
