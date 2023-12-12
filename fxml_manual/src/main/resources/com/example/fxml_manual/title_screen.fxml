@@ -4,8 +4,10 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -23,23 +25,50 @@
         <!--                  </image>-->
         <!--              </ImageView>-->
         <Text layoutX="20.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="v1.0" />
-        <MenuBar layoutX="1.0" layoutY="6.0" prefHeight="35.0" prefWidth="990.0">
+        <MenuBar fx:id="menub" layoutX="1.0" layoutY="6.0" prefHeight="35.0" prefWidth="990.0">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="About">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#documentation_clicked" text="Documentation">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="D" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#credits_clicked" text="Credits">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#license_clicked" text="License">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="L" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#reference_clicked" text="References">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="R" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#faq_clicked" text="FAQs" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#forceexit_clicked" text="Force Exit" />
                     </items>
                 </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#exit_f" text="Exit Application" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#muteaudio_clicked" text="Mute Audio" />
+              </items>
+            </Menu>
             </menus>
         </MenuBar>
         <Text fill="WHITE" layoutX="286.0" layoutY="222.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="5.0" text="Pixel Blitz" wrappingWidth="428.7279052734375">
@@ -47,11 +76,11 @@
                 <Font name="Nexa Heavy" size="80.0" />
             </font>
         </Text>
-        <Button layoutX="254.0" layoutY="320.0" mnemonicParsing="false" onAction="#switch_to_game_select" prefHeight="98.0" prefWidth="477.0" text="Play">
+        <Button fx:id="pbutton" layoutX="254.0" layoutY="320.0" mnemonicParsing="false" onAction="#switch_to_game_select" prefHeight="98.0" prefWidth="477.0" text="Play">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button layoutX="254.0" layoutY="452.0" mnemonicParsing="false" onAction="#exit_f" prefHeight="102.0" prefWidth="480.0" text="Exit">
+        <Button fx:id="pexit" layoutX="254.0" layoutY="452.0" mnemonicParsing="false" onAction="#exit_f" prefHeight="102.0" prefWidth="480.0" text="Exit">
          <font>
             <Font size="30.0" />
          </font></Button>

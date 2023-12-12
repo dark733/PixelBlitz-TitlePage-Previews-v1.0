@@ -20,17 +20,22 @@
          <font>
             <Font size="39.0" />
          </font></Button>
-      <Button layoutX="50.0" layoutY="238.0" mnemonicParsing="false" onAction="#game_one" prefHeight="107.0" prefWidth="500.0" text="Game One">
+      <Button layoutX="50.0" layoutY="238.0" mnemonicParsing="false" onAction="#game_one_clicked" prefHeight="107.0" prefWidth="500.0" text="Game One">
          <font>
             <Font size="32.0" />
          </font></Button>
-      <Button layoutX="50.0" layoutY="420.0" mnemonicParsing="false" onAction="#game_two" prefHeight="100.0" prefWidth="502.0" text="Game Two">
+      <Button layoutX="50.0" layoutY="420.0" mnemonicParsing="false" onAction="#game_two_clicked" prefHeight="100.0" prefWidth="502.0" text="Game Two">
          <font>
             <Font size="30.0" />
          </font></Button>
-      <Button layoutX="46.0" layoutY="565.0" mnemonicParsing="false" onAction="#game_three" prefHeight="99.0" prefWidth="510.0" text="Game Three">
+      <Button layoutX="46.0" layoutY="565.0" mnemonicParsing="false" onAction="#game_three_clicked" prefHeight="99.0" prefWidth="510.0" text="Game Three">
          <font>
             <Font size="29.0" />
          </font></Button>
+      <Button layoutX="51.0" layoutY="877.0" mnemonicParsing="false" onAction="#switchBackToTitleScene" prefHeight="82.0" prefWidth="423.0" text="GoBack">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
