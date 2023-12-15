@@ -7,4 +7,5 @@ Major reasons why this exists are-
 4)Contributing to devlopmental stuff
 5)To make games which are less stresfull and sweaty and more relaxing
 6)To make an application from full scratch
-12/12/23
+16/12/23
+///note games are not implmented as of above mentioned date on line number 10
