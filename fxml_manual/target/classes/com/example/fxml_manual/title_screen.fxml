@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -16,7 +17,7 @@
     <children>
         <ImageView fitHeight="1010.0" fitWidth="1005.0" layoutX="-7.0" pickOnBounds="true">
             <image>
-                <Image url="@title_bg.jpeg" />
+                <Image url="@title_bg_rw.jpeg" />
             </image>
         </ImageView>
         <!--       <ImageView fx:id="ImageView" fitHeight="400.0" fitWidth="805.0" layoutX="-187.0" pickOnBounds="true" preserveRatio="true">-->
@@ -27,7 +28,7 @@
         <Text layoutX="20.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="v1.0" />
         <MenuBar fx:id="menub" layoutX="1.0" layoutY="6.0" prefHeight="35.0" prefWidth="990.0">
             <menus>
-                <Menu mnemonicParsing="false" text="About">
+                <Menu mnemonicParsing="false" styleClass="mdb" text="About">
                     <items>
                   <MenuItem mnemonicParsing="false" onAction="#documentation_clicked" text="Documentation">
                      <accelerator>
@@ -40,7 +41,7 @@
                         <KeyCodeCombination alt="UP" code="C" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
                      </accelerator></MenuItem>
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#license_clicked" text="License">
+                  <MenuItem mnemonicParsing="false" onAction="#license_clicked_test_function" text="License">
                      <accelerator>
                         <KeyCodeCombination alt="UP" code="L" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
                      </accelerator>
@@ -54,15 +55,18 @@
                   <SeparatorMenuItem mnemonicParsing="false" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Help">
+                <Menu mnemonicParsing="false" styleClass="mdb" text="Help">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#faq_clicked" text="FAQs" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#forceexit_clicked" text="Force Exit" />
+                  <MenuItem fx:id="forceExit_id" mnemonicParsing="false" onAction="#forceexit_clicked" text="Force Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
                     </items>
                 </Menu>
-            <Menu mnemonicParsing="false" text="Settings">
+            <Menu mnemonicParsing="false" styleClass="mdb" text="Settings">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#exit_f" text="Exit Application" />
                   <SeparatorMenuItem mnemonicParsing="false" />
@@ -70,6 +74,9 @@
               </items>
             </Menu>
             </menus>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
         </MenuBar>
         <Text fill="WHITE" layoutX="286.0" layoutY="222.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="5.0" text="Pixel Blitz" wrappingWidth="428.7279052734375">
             <font>
@@ -94,5 +101,6 @@
             <Font name="Nexa Heavy" size="30.0" />
          </font>
       </Text>
+      <Text fx:id="text_area_shortcut" layoutX="20.0" layoutY="130.0" stroke="#fff6f6" strokeType="OUTSIDE" strokeWidth="3.0" text="Shift +D  =  Documents&#10;Shift +L = License&#10;Shift + R = References&#10;Shift + C = Credits&#10;Shift  + Control + E = Exit" />
     </children>
 </AnchorPane>

@@ -32,10 +32,5 @@
          <font>
             <Font size="29.0" />
          </font></Button>
-      <Button layoutX="51.0" layoutY="877.0" mnemonicParsing="false" onAction="#switchBackToTitleScene" prefHeight="82.0" prefWidth="423.0" text="GoBack">
-         <font>
-            <Font size="39.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

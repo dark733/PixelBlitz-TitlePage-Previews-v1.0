@@ -19,7 +19,8 @@
 /* Hover effect */
 #pbutton:hover {
     -fx-background-color: #43A047; /* Darker background color on hover */
-    -fx-border-color: #2E7D32; /* Darker border color on hover */
+    -fx-border-color: #00ffbe; /* Darker border color on hover */
+
 }
 
 /* Pressed effect */
@@ -46,7 +47,7 @@
 /* Hover effect */
 #pexit:hover {
     -fx-background-color: #43A047; /* Darker background color on hover */
-    -fx-border-color: #2E7D32; /* Darker border color on hover */
+    -fx-border-color: #00ffbe; /* Darker border color on hover */
 }
 
 /* Pressed effect */
@@ -59,10 +60,15 @@
 /* styles.css */
 
 #menub {
-    -fx-background-color: #43A047; /* Background color */
+    -fx-background-color: #bbd5bb; /* Background color */
     -fx-padding: 10px; /* Padding */
     -fx-border-width: 0 0 2px 0; /* Border width (bottom) */
-    -fx-border-color: #2a5201; /* Border color */
+    -fx-border-color: #61c453; /* Border color */
+    -fx-border-radius: 20px;
+}
+#menub:hover{
+
+    -fx-border-color: #00ffbe;
 }
 
 #menub .menu-bar {
@@ -89,5 +95,17 @@
 
 #menub .menu-bar .menu .menu-item:hover {
     -fx-background-color: #607D8B; /* Background color on hover for menu items */
+}
+#text_area_shortcut{
+    -fx-background-color: #ffffff;
+    -fx-opacity: 0;
+
+}
+#text_area_shortcut:hover{
+    -fx-transition: opacity 0.5s;
+    -fx-opacity: 0.7;
+}
+.mdb:hover{
+    -fx-border-radius: 3px;
 }
 
