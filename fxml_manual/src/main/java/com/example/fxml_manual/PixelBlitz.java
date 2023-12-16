@@ -98,7 +98,7 @@ class loading_animation {
                     // Update progress bar on UI thread
                     Platform.runLater(() -> controller.setProgress(1.0));
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                   System.out.println("Interrupted Exception Caught " + e);
                 }
                 catch (Exception e){
                     System.out.println("Exception Caught" + e);

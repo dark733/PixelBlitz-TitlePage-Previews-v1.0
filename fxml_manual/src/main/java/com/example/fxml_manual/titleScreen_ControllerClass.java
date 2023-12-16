@@ -9,19 +9,22 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.Objects;
+
 import javafx.scene.layout.AnchorPane;
 
 
 public class titleScreen_ControllerClass {
     //PixelBlitz obj_main = new PixelBlitz();
-    menu_bar menu_bar_obj = new menu_bar();
-    game_one gameOne_obj = new game_one();
-    game_two gameTwo_obj = new game_two();
+    private final soundApi obj_sound = new soundApi();
+    private final menu_bar menu_bar_obj = new menu_bar();
+    private final game_one gameOne_obj = new game_one();
+    private final game_two gameTwo_obj = new game_two();
     game_three gameThree_obj = new game_three();
 
     @FXML
-    private AnchorPane TitleScreen;
-    private Stage stage;
+    //private AnchorPane TitleScreen;
+    public  Stage stage;
 
     public void setStage(Stage stage) {
 
@@ -30,7 +33,8 @@ public class titleScreen_ControllerClass {
 
     @FXML
     void exit_f(ActionEvent event) {
-        System.out.println("Exiting Application Success!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("Exiting Application Success!" + event );
         // Properly close the application
 //        stage.close();
         Platform.exit();
@@ -38,7 +42,9 @@ public class titleScreen_ControllerClass {
 
     @FXML
     void switch_to_game_select(ActionEvent event) {
-        System.out.println("Play Button Clicked");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("Play Button Clicked" + event );
+        obj_sound.play_game_selection_screen_sound();
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("game_selection_screen.fxml"));
             Parent gameSelectionRoot = fxmlLoader.load();
@@ -59,40 +65,47 @@ public class titleScreen_ControllerClass {
 
 
     public void game_one_clicked(ActionEvent event){
+        obj_sound.play_game_selection_screen_sound();
         System.out.println("Game One!" + event);
         gameOne_obj.game_one_event();
         // Add logic for game one actions
     }
 
     public void game_two_clicked(ActionEvent event){
-        System.out.println("Game Two!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("Game Two!" + event );
         gameTwo_obj.game_two_event();
         // Add logic for game two actions
     }
 
     public void game_three_clicked(ActionEvent event){
-        System.out.println("Game Three!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("Game Three!"+event );
         gameThree_obj.game_three_event();
 
         // Add logic for game three actions
     }
     public void documentation_clicked(ActionEvent e){
-        System.out.println("documentation_clicked!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("documentation_clicked!"+e );
         menu_bar_obj.documentation_event(stage);
 
     }
     public void reference_clicked(ActionEvent e){
-        System.out.println("reference_clicked!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("reference_clicked!"+e);
         menu_bar_obj.references_event(stage);
 
     }
     public void switch_title(ActionEvent e){
-        System.out.println("Go Back clicked!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("Go Back clicked!"+e);
         System.out.println(null == this.stage ? "Stage is null " : "stage is not null!");
        // menu_bar_obj.switchBackToGameSelectionScreen(stage);
     }
     public void switch_title_one(ActionEvent e){
-        System.out.println("Go Back clicked!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("Go Back clicked!" +e );
         if (this.stage == null){
             System.out.println("Stage is null ");
         }
@@ -102,12 +115,15 @@ public class titleScreen_ControllerClass {
         // menu_bar_obj.switchBackToGameSelectionScreen(stage);
     }
     public void credits_clicked(ActionEvent e){
-        System.out.println("credits_clicked!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("credits_clicked!"+e);
+        obj_sound.credit_screen_sound();
         menu_bar_obj.credits_event(stage);
 
     }
     public void license_clicked_test_function(ActionEvent e){
-        System.out.println("license_clicked from test function()!");
+        obj_sound.play_game_selection_screen_sound();
+        System.out.println("license_clicked from test function()!"+e );
         menu_bar_obj.license_event(stage);
         if (stage == null){
             System.out.println("Stage is null ");
@@ -119,7 +135,7 @@ public class titleScreen_ControllerClass {
 
     }
     public void license_clicked(ActionEvent e){
-        System.out.println("license_clicked!");
+        System.out.println("license_clicked!"+e );
         menu_bar_obj.license_event(stage);
         if (stage == null){
             System.out.println("Stage is null ");
@@ -131,14 +147,17 @@ public class titleScreen_ControllerClass {
 
     }
     public void faq_clicked(){
+        obj_sound.play_game_selection_screen_sound();
         System.out.println("FAQ_clicked!");
         menu_bar_obj.faq_event(stage);
     }
     public void forceexit_clicked(){
+        obj_sound.play_game_selection_screen_sound();
         System.out.println("force_exit_clicked!");
         menu_bar_obj.force_exit_event();
     }
     public void muteaudio_clicked(){
+        obj_sound.play_game_selection_screen_sound();
         System.out.println("mute_audio_clicked!");
         menu_bar_obj.mute_audio_event();
     }
@@ -157,7 +176,7 @@ class menu_bar{
         }
         catch (IOException e) {
             System.out.println("Something went wrong loading game_documentation.fxml: " + e.getMessage());
-            e.printStackTrace();
+
         }
 
         catch(NullPointerException e){
@@ -180,7 +199,7 @@ class menu_bar{
         }
         catch (IOException e) {
             System.out.println("Something went wrong loading reference.fxml: " + e.getMessage());
-            e.printStackTrace();
+
         }
 
         catch(NullPointerException e){
@@ -201,10 +220,12 @@ class menu_bar{
             //Node stage2;
             stage.getScene().setRoot(gameSelectionRoot);
 
+
+
         }
         catch (IOException e) {
-            System.out.println("Something went wrong loading game_documentation.fxml: " + e.getMessage());
-            e.printStackTrace();
+            System.out.println("Something went wrong loading Credits.fxml: " + e.getMessage());
+
         }
 
     }
@@ -221,12 +242,12 @@ class menu_bar{
 
             // Set the content of the stage's scene to the game selection root
             //Node stage2;
-            stage.getScene().setRoot(gameSelectionRoot);
+            Objects.requireNonNull(stage).getScene().setRoot(gameSelectionRoot);
 
         }
         catch (IOException e) {
             System.out.println("Something went wrong loading game_documentation.fxml: " + e.getMessage());
-            e.printStackTrace();
+
         }
 
     }
@@ -242,7 +263,7 @@ class menu_bar{
         }
         catch (IOException e) {
             System.out.println("Something went wrong loading game_documentation.fxml: " + e.getMessage());
-            e.printStackTrace();
+
         }
 
     }
