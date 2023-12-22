@@ -8,6 +8,9 @@ Major reasons why this exists are-
 5)To make games which are less stresfull and sweaty and more relaxing
 6)To make an application from full scratch
 
-///note games are not implmented as of above mentioned date 22/12/23
+///note games are not implmented as of above mentioned date 21/12/23
 //only these stuff are implemented
 MenuBar,ShortCuts,TitlePage,GameSelectionPage and SoundAPI
+
+//Code Optimization 
+22/12/23
