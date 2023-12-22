@@ -7,4 +7,7 @@ Major reasons why this exists are-
 4)Contributing to devlopmental stuff
 5)To make games which are less stresfull and sweaty and more relaxing
 6)To make an application from full scratch
+
 ///note games are not implmented as of above mentioned date 22/12/23
+//only these stuff are implemented
+MenuBar,ShortCuts,TitlePage,GameSelectionPage and SoundAPI
