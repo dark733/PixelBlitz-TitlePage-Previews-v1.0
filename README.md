@@ -14,3 +14,5 @@ MenuBar,ShortCuts,TitlePage,GameSelectionPage and SoundAPI
 
 //Code Optimization 
 22/12/23
+
+This Project was developed using Java,AWT,Swing and JavaFX
