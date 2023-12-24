@@ -16,3 +16,4 @@ MenuBar,ShortCuts,TitlePage,GameSelectionPage and SoundAPI
 22/12/23
 
 This Project was developed using Java,AWT,Swing and JavaFX
+//This repo is now obselete and is replaced by v1.1 which is available as a seprate repo
